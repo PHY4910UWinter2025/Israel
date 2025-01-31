@@ -77,7 +77,7 @@ def test_pick_direction():
     ax.set_aspect('equal')
     ax.set_xlabel("X")
     ax.set_ylabel("Y")
-    ax.set_zlabel("Y")
+    ax.set_zlabel("Z")
     plt.title("Random walks for my sphere")
     plt.show()
  	
