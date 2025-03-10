@@ -105,6 +105,11 @@ class System:
 				p_j = self.particles[j]
 				r = p_i.distance_from(p_j)
 				r3 = r**3
+
+				if r == 0:  # Avoid division by zero
+			            print(f"Warning: Particles {i} and {j} are overlapping!")
+			            continue
+
 				for k in range(3):
 					p_i.accel[k] += -self.G * p_j.mass * (p_i.position[k] - p_j.position[k]) / r3
 					p_j.accel[k] += -self.G * p_i.mass * (p_j.position[k] - p_i.position[k]) / r3
